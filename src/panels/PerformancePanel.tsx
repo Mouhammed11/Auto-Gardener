@@ -23,9 +23,9 @@ export default function PerformancePanel() {
     <>
       {!data && <Loading />}
       <Chart style={{ opacity: data ? "1" : "0" }}>
-        <ChartTitle text="Fund Performance" />
+        <ChartTitle text="Water usage over time" />
         <ChartCategoryAxis>
-          <ChartCategoryAxisItem categories={["2014", "2015", "2016", "2017", "2018", "2019", "2020"]} />
+          <ChartCategoryAxisItem categories={["0", "1", "2", "3", "4", "5", "6"]} />
         </ChartCategoryAxis>
         <ChartSeries>
           <ChartSeriesItem type="line" data={data} />

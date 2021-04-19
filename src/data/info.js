@@ -1,44 +1,33 @@
 export const info = {
   "managers": [
     {
-      firstName: "Nora",
-      lastName: "Georgieva",
-      position: "Lead Investor"
+      firstName: "Jared",
+      lastName: "Wagner",
+      position: "Team Leader"
     }, {
-      firstName: "Carl",
-      lastName: "Bergenhem",
-      position: "Advisor"
+      firstName: "Mouhammed",
+      lastName: "Diagne",
+      position: ""
     }, {
-      firstName: "Kiril",
-      lastName: "Peyanski",
+      firstName: "Mife",
+      lastName: "Atewakumbo",
       position: "Senior Analyst"
-    }, {
-      firstName: "Pamela",
-      lastName: "Petkova",
-      position: "Senior Analyst"
-    }, {
-      firstName: "Vasil",
-      lastName: "Raev",
-      position: "Junior Associate"
-    }, {
-      firstName: "Genady",
-      lastName: "Sergeev",
-      position: "Trainee"
+    }, 
+    {
+      firstName: "Sean",
+      lastName: "Mcgufey",
+      position: ""
     }
   ],
   "quarters": [
     {
-      title: "Q1 2020",
+      title: "Pump options",
       details: [
-        { name: "Expense Ratio", value: "0.13%" },
-        { name: "Minimum Investment", value: "$0.00" },
-        { name: "Turnover Rate", value: "11%" },
-        { name: "Portfolio Assets", value: "$5,533M" },
-        { name: "12-Month Low", value: "$35.45" },
-        { name: "12-Month High", value: "$50.59" }
+        { name: "on" },
+        { name: "off"}
       ]
     },
-    {
+    /*{
       title: "Q4 2019",
       details: [
         { name: "Expense Ratio", value: "0.13%" },
@@ -114,6 +103,6 @@ export const info = {
         { name: "12-Month Low", value: "$35.45" },
         { name: "12-Month High", value: "$50.59" }
       ]
-    }
+    }*/
   ]
 }

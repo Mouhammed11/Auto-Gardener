@@ -1,4 +1,5 @@
 import React from "react";
+import Plant from "../Plant.png";
 import {
   Chart,
   ChartLegend,
@@ -6,7 +7,8 @@ import {
   ChartSeriesItem,
   ChartSeriesLabels,
   ChartTitle,
-  ChartTooltip
+  ChartTooltip,
+  PlotAreaClickEvent
 } from "@progress/kendo-react-charts";
 
 import { getFundAllocation } from "../services/dataService";
@@ -29,9 +31,12 @@ export default function AllocationPanel() {
 
   return (
     <>
-      {!data && <Loading />}
+      
+           <img title="Plant" width="100" src={Plant}  />
+      {/*{!data && <Loading />}
       <Chart style={{ opacity: data ? "1" : "0" }}>
-        <ChartTitle text={"Asset Allocation"}></ChartTitle>
+        <ChartTitle text={"Plant"}></ChartTitle>
+        
         <ChartSeries>
           <ChartSeriesItem type="donut" data={data}>
             <ChartSeriesLabels content={labelContent} background="none" color="#fff" />
@@ -39,7 +44,7 @@ export default function AllocationPanel() {
         </ChartSeries>
         <ChartLegend position={"bottom"} visible={true} />
         <ChartTooltip render={renderTooltip} />
-      </Chart>
+      </Chart>*/}
     </>
   )
 }

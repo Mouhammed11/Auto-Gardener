@@ -44,10 +44,10 @@ export default function PositionsPanel() {
       >
         <GridColumn title="Symbol" field="symbol" locked={true} width={100} />
         <GridColumn title="Name" field="name" />
-        <GridColumn title="Change" field="day_change" cell={ChangeCell} />
-        <GridColumn title="% Change" field="change_pct" cell={ChangeCell} />
-        <GridColumn title="Volume" field="volume" cell={NumberCell} />
-        <GridColumn title="Market Cap" field="market_cap" cell={NumberCell} />
+        <GridColumn title="Amount of water added" field="day_change" /*cell={ChangeCell}*/ />
+        <GridColumn title="% Soil Moisture" field="change_pct" /*cell={ChangeCell}*/ />
+        <GridColumn title="Room Temperature" field="volume" /*cell={NumberCell}*/ />
+        {/*<GridColumn title="Market Cap" field="market_cap" cell={NumberCell} />*/}
       </Grid>
     </>
   )

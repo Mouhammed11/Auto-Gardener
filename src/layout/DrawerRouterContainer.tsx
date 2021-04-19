@@ -54,12 +54,12 @@ const DrawerRouterContainer = (props: React.PropsWithChildren<any>) => {
               <span>
                 <Button icon="menu" look="flat" onClick={toggleDrawer} />
                 <span className="title">
-                  ACME Stocks
+                  AutoGardener
                   <span className="divider">|</span>
                   <span className="fund">{items[selectedId].text}</span>
                 </span>
               </span>
-              <img alt={user.name} src={user.img} />
+              
             </h1>
           </div>
           {props.children}
