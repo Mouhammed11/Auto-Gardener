@@ -14,7 +14,7 @@ function App() {
       <DrawerRouterContainer>
         <div className="page-container">
           <Switch>
-            <Route path="/tech-fund">
+            <Route path="/Operations">
               <Dashboard />
             </Route>
             <Route path="/">

@@ -29,22 +29,5 @@ export default function AllocationPanel() {
     })
   }, []);
 
-  return (
-    <>
-      
-           <img title="Plant" width="100" src={Plant}  />
-      {/*{!data && <Loading />}
-      <Chart style={{ opacity: data ? "1" : "0" }}>
-        <ChartTitle text={"Plant"}></ChartTitle>
-        
-        <ChartSeries>
-          <ChartSeriesItem type="donut" data={data}>
-            <ChartSeriesLabels content={labelContent} background="none" color="#fff" />
-          </ChartSeriesItem>
-        </ChartSeries>
-        <ChartLegend position={"bottom"} visible={true} />
-        <ChartTooltip render={renderTooltip} />
-      </Chart>*/}
-    </>
-  )
+  
 }

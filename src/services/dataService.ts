@@ -1,6 +1,5 @@
 import { info } from "../data/info";
-import { allocation } from "../data/allocation";
-import { performance } from "../data/performance";
+
 import { positions } from "../data/positions";
 import { Allocation, Position } from "../data/models";
 
@@ -21,7 +20,7 @@ export function getFundInfo(): Promise<any> {
 export function getFundAllocation(): Promise<Allocation[]> {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(allocation);
+      //resolve(allocation);
     }, getRandomDelay());
   });
 }
@@ -29,7 +28,7 @@ export function getFundAllocation(): Promise<Allocation[]> {
 export function getPerformance(): Promise<string[]> {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(performance);
+      //resolve(performance);
     }, getRandomDelay());
   })
 }

@@ -6,15 +6,11 @@ import { Button } from "@progress/kendo-react-buttons";
 import { Drawer, DrawerContent } from "@progress/kendo-react-layout";
 import { DrawerSelectEvent } from "@progress/kendo-react-layout/dist/npm/drawer/interfaces/DrawerSelectEvent";
 
-const user = {
-  initials: "TV",
-  name: "TJ VanToll",
-  img: "https://pbs.twimg.com/profile_images/1029805644310827008/wkAPO_XC_400x400.jpg"
-};
+
 
 const items = [
   { text: "Home", icon: "k-i-home", route: "/", children: null },
-  { text: "Tech Fund", icon: "k-i-dollar", route: "/tech-fund", children: null }
+  { text: "Operations",  route: "/Operations", children: null }
 ];
 
 const DrawerRouterContainer = (props: React.PropsWithChildren<any>) => {
@@ -56,7 +52,7 @@ const DrawerRouterContainer = (props: React.PropsWithChildren<any>) => {
                 <span className="title">
                   AutoGardener
                   <span className="divider">|</span>
-                  <span className="fund">{items[selectedId].text}</span>
+                  
                 </span>
               </span>
               

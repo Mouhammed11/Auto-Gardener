@@ -11,9 +11,9 @@ export default function Dashboard() {
       <div className="panel-info">
         <InfoPanel />
       </div>
-      <div className="panel-allocation">
+     {/*} <div className="panel-allocation">
         <AllocationPanel />
-      </div>
+  </div>*/}
       <div className="panel-balance">
         <PerformancePanel />
       </div>

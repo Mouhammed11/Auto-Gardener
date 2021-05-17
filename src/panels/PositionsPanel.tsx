@@ -1,9 +1,11 @@
+// @ts-nocheck
 import React from "react";
 import { Grid, GridCellProps, GridColumn } from "@progress/kendo-react-grid";
 
 import { getPositions } from "../services/dataService";
 import Loading from "../layout/Loading";
 import { Position } from "../data/models";
+import db from '../data/firebase.config';
 
 const NumberCell = (props: GridCellProps) => {
   const field = props.field || "";
@@ -26,14 +28,37 @@ const ChangeCell = (props: GridCellProps) => {
   );
 }
 
+var DataRef = db.ref('info/');
 export default function PositionsPanel() {
   const [positions, setPositions] = React.useState<Position[]>();
+  
+    
+
+
 
   React.useEffect(() => {
-    getPositions().then((data: Position[]) => {
-      setPositions(data);
+    const subscription = DataRef.on('value', (snapshot) => {
+      const data = snapshot.val();
+      console.log(data)
+      const positions = [];
+  for (const [key, value] of Object.entries(data)) {
+      const position = 
+      {
+          'humidity': value.humidity,
+          'moisture': value.moisture,
+          'temperatureC': value.temperatureC,
+          'temperatureF': value.temperatureF
+      };
+  positions.push(position);
+}
+      
+      setPositions(positions);
     });
-  }, []);
+    // Specify how to clean up after this effect:
+    return function cleanup() {
+      DataRef.off('value');
+    };
+  });
 
   return (
     <>
@@ -42,11 +67,11 @@ export default function PositionsPanel() {
         data={positions}
         style={{ opacity: positions ? "1" : "0" }}
       >
-        <GridColumn title="Symbol" field="symbol" locked={true} width={100} />
-        <GridColumn title="Name" field="name" />
-        <GridColumn title="Amount of water added" field="day_change" /*cell={ChangeCell}*/ />
-        <GridColumn title="% Soil Moisture" field="change_pct" /*cell={ChangeCell}*/ />
-        <GridColumn title="Room Temperature" field="volume" /*cell={NumberCell}*/ />
+        
+        <GridColumn title="Humidity" field="humidity" />
+        <GridColumn title="Moisture(%)" field="moisture" /*cell={ChangeCell}*/ />
+        <GridColumn title="TemperatureC" field="temperatureC" /*cell={ChangeCell}*/ />
+        <GridColumn title="TemperatureF" field="temperatureF" /*cell={NumberCell}*/ />
         {/*<GridColumn title="Market Cap" field="market_cap" cell={NumberCell} />*/}
       </Grid>
     </>
